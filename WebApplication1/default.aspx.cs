@@ -10,8 +10,8 @@ namespace WebApplication1
 {
     public partial class _default : System.Web.UI.Page
     {
-        const string channelAccessToken = "";
-        const string AdminUserId= "";
+        const string channelAccessToken = "~~換成你自己的channelAccessToken~~";
+        const string AdminUserId= "~~換成你自己的User Id~~";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,7 +25,7 @@ namespace WebApplication1
             msg.quickReply.items.Add(
                 new isRock.LineBot.QuickReplyPostbackAction("顯示的文字", "abc=123&def=456", "", ""));
             bot.PushMessage(AdminUserId, msg);
-            Response.Write(msg.ToJSON());
+            //Response.Write(msg.ToJSON());
         }
     }
 }
